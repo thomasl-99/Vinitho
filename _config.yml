@@ -16,8 +16,10 @@ baseurl: ""
 # Markdown rendering
 markdown: kramdown
 highlighter: rouge
-permalink: /:year/:month/:day/:title/
-# /:title/ veroorzaakt dat site.posts leeg is — Jekyll verwacht datum in pad
+permalink: /:title/
+
+# Theme
+theme: minima
 
 # Front-matter defaults
 defaults:
@@ -25,7 +27,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: default
+      layout: post
       lang: nl
 
 # Plugins

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'nl' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 760px; margin: 2rem auto; padding: 0 1.5rem; line-height: 1.65; color: #222; }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .tagline { color: #666; font-style: italic; margin-top: 0; }
+    h2 { font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
+    section { margin-bottom: 1.5rem; }
+    .breadcrumbs { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+    .breadcrumbs a { color: #888; text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .breadcrumbs .sep { margin: 0 0.4rem; }
+    .seealso { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; }
+    .seealso h2 { font-size: 1.1rem; }
+    .seealso ul { padding-left: 1.2rem; }
+    .seealso li { margin-bottom: 0.5rem; }
+    a { color: #1a4d8f; }
+    .post-meta { color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    {% if page.layout == 'post' %}
+      <span class="sep">›</span>
+      <span>{{ page.title }}</span>
+    {% endif %}
+  </nav>
+
+  {{ content }}
+
+  {% if page.layout == 'post' and site.posts.size > 1 %}
+  <aside class="seealso">
+    <h2>Zie ook</h2>
+    <ul>
+      {% assign related = site.posts | where_exp: 'p', 'p.url != page.url' | limit: 5 %}
+      {% for p in related %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a> <span style="color:#888;">— {{ p.date | date: "%d %b %Y" }}</span></li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+  {% if page.layout == 'post' %}
+  <!-- BlogPosting JSON-LD — alleen voor posts, niet voor de homepage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | default: page.excerpt | strip_html | normalize_whitespace | jsonify }},
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "inLanguage": "{{ page.lang | default: 'nl' }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "email": "mailto:thomas@vinitho.nl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    },
+    "articleSection": {% if page.categories %}{{ page.categories | first | jsonify }}{% else %}"blog"{% endif %},
+    "wordCount": {{ content | number_of_words }},
+    "keywords": {% if page.tags %}{{ page.tags | join: ', ' | jsonify }}{% else %}null{% endif %}
+  }
+  </script>
+  {% endif %}
+
+</body>
+</html>
