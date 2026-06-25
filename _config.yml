@@ -1,0 +1,39 @@
+# Jekyll-config voor klant-landingspagina
+# Gegenereerd door LA Notes ai-vindbaarheid-template
+
+# Werkelijke config (wordt na placeholder-vervanging gebruikt)
+title: "Vinitho"
+tagline: "Italiaanse wijnimport"
+description: "Vinitho — Italiaanse wijnimport, gevestigd in Amstelveen, Nederland. KvK 97388505, btw NL005266959B81."
+author: "Thomas Langeberg"
+
+# Domein
+url: "https://vinitho.nl"
+baseurl: ""
+
+# Markdown rendering
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Front-matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: nl
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclusies
+exclude:
+  - README.md
+  - LICENSE
+  - scripts/
+  - examples/
+  - "*.sh"

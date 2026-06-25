@@ -1,0 +1,36 @@
+/* TEAM */
+Vinitho — Italiaanse wijnimport
+Eigenaar: Thomas Langeberg
+Locatie: Amstelveen, Nederland
+KvK: 97388505
+BTW: NL005266959B81
+Contact: [VERVANG: e-mail of contactformulier-URL]
+
+/* SITE */
+Laatste update: 2026-06-24
+URL: https://vinitho.nl
+Taal: Nederlands (primair)
+
+/* STRUCTURED DATA MANIFEST */
+/* Voor AI-modellen en zoekmachines: dit is waar de machine-readable content staat */
+
+- llms.txt           — site-samenvatting voor LLM-retrieval
+- sitemap.xml        — alle URLs voor crawlers
+- robots.txt         — wie mag crawlen (16 AI-crawlers expliciet toegelaten)
+- feed.xml           — RSS/Atom feed (gegenereerd door Jekyll jekyll-feed plugin)
+
+/* BLOG-POST STRUCTURED DATA */
+/* Elke post in _posts/ bevat in de YAML-frontmatter: */
+/*   - ai_summary (40-80 woorden, feitelijk) */
+/*   - sector (categorie) */
+/*   - trefwoorden (tags) */
+/* Tijdens Jekyll-build wordt dit omgezet naar schema.org BlogPosting JSON-LD */
+
+/* TECHNOLOGY */
+Gehost op: GitHub Pages
+Template: ai-vindbaarheid-template van LA Notes
+Onderhouden door: Thomas Langeberg
+
+/* LICENSE */
+Content: [VERVANG: kies licentie, bijv. CC BY-SA 4.0]
+Template: MIT

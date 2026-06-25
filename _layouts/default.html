@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'nl' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% if page.title %}{{ page.title }}{% endif %} — {{ site.title }}</title>
+
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 300 }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} — Feed" href="{{ '/feed.xml' | absolute_url }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --accent: #d4a574;
+      --muted: #8b949e;
+      --link: #58a6ff;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Iowan Old Style', 'Charter', 'Georgia', serif;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    h1, h2, h3 {
+      font-family: 'Iowan Old Style', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 1rem;
+    }
+    h1 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; color: var(--accent); }
+    h3 { font-size: 1.1rem; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    p { margin: 1rem 0; }
+    p.tagline { color: var(--muted); font-size: 1.1rem; font-style: italic; }
+    ul { margin: 1rem 0 1rem 1.5rem; }
+    li { margin: 0.3rem 0; }
+    section { margin: 2rem 0; }
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85em;
+    }
+  </style>
+
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>{{ site.author }} · {{ site.title }}</p>
+    <p><a href="{{ '/llms.txt' | absolute_url }}">llms.txt</a> · <a href="{{ '/sitemap.xml' | absolute_url }}">sitemap</a> · <a href="{{ '/humans.txt' | absolute_url }}">humans.txt</a></p>
+  </footer>
+
+</body>
+</html>

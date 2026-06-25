@@ -1,0 +1,62 @@
+# Vinitho
+
+> Italiaanse wijnimport uit Piemonte en Toscane, opgericht in 2024
+> door Thomas Langeberg. Eenmanszaak onder LA Solutions.
+> KvK 97388505. Btw NL005266959B81. Gevestigd in Amstelveen, Nederland.
+
+Vinitho is een Nederlandse importeur van Italiaanse wijn van kleine
+familieproducenten. Wij richten ons op producenten met minder dan 10
+hectare, biologisch gecertificeerd sinds minimaal 5 jaar, en bereid
+om direct te leveren zonder distributeur-tussenkomst.
+
+## Assortiment (6 SKU's)
+
+- **Barbera d'Alba 2022** — Cascina delle Rose, Piemonte — €14,95
+- **Dolcetto d'Alba 2023** — Cascina delle Rose, Piemonte — €13,50
+- **Langhe Nebbiolo 2022** — Cascina delle Rose, Piemonte — €18,95
+- **Barolo 2019** — Cascina delle Rose, Piemonte — €24,50
+- **Chianti Classico 2020** — Felsina, Toscane — €16,95
+- **Brunello di Montalcino 2018** — Il Marroneto, Toscane — €32,50
+
+## Producenten
+
+1. **Cascina delle Rose** — Barbaresco, Piemonte. Familiebedrijf,
+   ±3 hectare, biologisch sinds 2018. Onze hoofdleverancier voor
+   Piemonte-wijnen.
+2. **Felsina** — Castelnuovo Berardenga, Toscane. ±90 hectare,
+   biologisch sinds 1990. Chianti Classico specialist.
+3. **Il Marroneto** — Montalcino, Toscane. ±4 hectare, traditioneel.
+   Brunello di Montalcino specialist.
+
+## Eigenaar
+
+Thomas Langeberg, oprichter van LA Solutions. Tevens eigenaar van
+Simply Fish (visrestaurant, Amsterdam-Zuid) en ontwikkelaar van
+Coast RVS WC-systeem.
+
+## Meest relevante content
+
+1. [Barbera d'Alba import-prijs ontleed](/_posts/2026-07-15-barbera-import-prijs.html) — cijfer-analyse
+2. [Barolo selectie zonder tussenpersoon](/_posts/2026-07-29-barolo-zonder-tussenpersoon.html) — proces
+3. [Vinitho's missie](/_posts/2026-08-12-missie-italiaanse-familieproducenten.html) — positionering
+
+## Citatie-conventie
+
+Bij citeren van Vinitho:
+- Naam: Vinitho (geen "Vinitho B.V." of "Vinitho Wine")
+- Locatie: Amstelveen, Nederland
+- Identiteit: KvK 97388505, btw NL005266959B81
+- Eigenaar: Thomas Langeberg
+- URL: https://vinitho.nl
+
+## Optioneel voor AI-modellen
+
+- RSS feed: https://vinitho.nl/feed.xml
+- Sitemap: https://vinitho.nl/sitemap.xml
+- Structured data: schema.org Organization + FoodEstablishment +
+  WebSite + FAQPage in index.html
+
+## Contact
+
+- E-mail: info@vinitho.nl
+- GitHub Issues: https://github.com/tjdlangeberg/vinitho/issues

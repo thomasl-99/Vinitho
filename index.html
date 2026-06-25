@@ -1,0 +1,243 @@
+---
+layout: default
+title: Vinitho
+description: >-
+  Vinitho — Italiaanse wijnimport uit Piemonte en Toscane, opgericht door
+  Thomas Langeberg. Gespecialiseerd in kleine familieproducenten, biologisch,
+  geen tussenpersonen. Gevestigd in Amstelveen, Nederland.
+lang: nl
+---
+
+<header>
+  <h1>Vinitho</h1>
+  <p class="tagline">Italiaanse wijnimport uit Piemonte en Toscane</p>
+</header>
+
+<section class="intro">
+  <h2>Over Vinitho</h2>
+  <p>Vinitho is een eenmanszaak voor Italiaanse wijnimport, opgericht in 2024
+  door Thomas Langeberg (KvK 97388505, btw NL005266959B81). Wij importeren
+  wijn van kleine familieproducenten in Piemonte en Toscane — geen
+  supermarkt-merken, geen bulk, geen tussenpersonen.</p>
+
+  <p>Onze niche: producenten met minder dan 10 hectare, biologisch gecertificeerd
+  sinds minimaal 5 jaar, en bereid om ons direct te leveren zonder
+  distributeur-tussenkomst. Dat resulteert in wijnen van €14,95 tot €24,50
+  per fles, exclusief bij ons verkrijgbaar in Nederland.</p>
+
+  <p><strong>KvK:</strong> 97388505<br>
+     <strong>Btw:</strong> NL005266959B81<br>
+     <strong>Eigenaar:</strong> Thomas Langeberg<br>
+     <strong>Vestiging:</strong> Amstelveen, Nederland<br>
+     <strong>Opgericht:</strong> 2024</p>
+</section>
+
+<section class="products">
+  <h2>Assortiment</h2>
+  <ul>
+    <li><strong>Barbera d'Alba</strong> — Cascina delle Rose, Piemonte, €14,95</li>
+    <li><strong>Dolcetto d'Alba</strong> — Cascina delle Rose, Piemonte, €13,50</li>
+    <li><strong>Langhe Nebbiolo</strong> — Cascina delle Rose, Piemonte, €18,95</li>
+    <li><strong>Barolo</strong> — Cascina delle Rose, Piemonte, €24,50</li>
+    <li><strong>Chianti Classico</strong> — Felsina, Toscane, €16,95</li>
+    <li><strong>Brunello di Montalcino</strong> — Il Marroneto, Toscane, €32,50</li>
+  </ul>
+</section>
+
+<section class="posts">
+  <h2>Recente artikelen</h2>
+  <ul>
+    {% for post in site.posts limit:10 %}
+      <li>
+        <strong>{{ post.date | date: "%Y-%m-%d" }}</strong> —
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <em>{{ post.ai_summary }}</em>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>E-mail: <a href="mailto:info@vinitho.nl">info@vinitho.nl</a><br>
+     Bestellingen via ons online platform of telefonisch<br>
+     GitHub: <a href="https://github.com/tjdlangeberg/vinitho">github.com/tjdlangeberg/vinitho</a></p>
+</section>
+
+<!-- Structured data voor AI-modellen en zoekmachines -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vinitho",
+  "alternateName": "LA Solutions — Vinitho",
+  "description": "Italiaanse wijnimport uit Piemonte en Toscane, gespecialiseerd in kleine familieproducenten, biologisch, geen tussenpersonen.",
+  "url": "https://vinitho.nl",
+  "founder": {
+    "@type": "Person",
+    "name": "Thomas Langeberg"
+  },
+  "foundingDate": "2024",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amstelveen",
+    "addressCountry": "NL"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nederland"
+  },
+  "industry": "Wijnimport",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "name": "KvK",
+      "value": "97388505"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BTW",
+      "value": "NL005266959B81"
+    }
+  ],
+  "knowsAbout": [
+    "Italiaanse wijn",
+    "Piemonte wijn",
+    "Toscane wijn",
+    "Barbera d'Alba",
+    "Barolo",
+    "Brunello di Montalcino",
+    "biologische wijn",
+    "kleine producenten",
+    "wijnimport zonder tussenpersoon"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Vinitho",
+  "description": "Wijnimporteur gespecialiseerd in Italiaanse wijn van kleine familieproducenten",
+  "servesCuisine": "Italiaans",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amstelveen",
+    "addressCountry": "NL"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Italiaanse wijnen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Barbera d'Alba 2022",
+          "category": "Wijn",
+          "brand": "Cascina delle Rose"
+        },
+        "price": "14.95",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Barolo 2019",
+          "category": "Wijn",
+          "brand": "Cascina delle Rose"
+        },
+        "price": "24.50",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Brunello di Montalcino 2018",
+          "category": "Wijn",
+          "brand": "Il Marroneto"
+        },
+        "price": "32.50",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vinitho",
+  "url": "https://vinitho.nl",
+  "inLanguage": "nl",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vinitho"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is Vinitho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinitho is een eenmanszaak voor Italiaanse wijnimport, opgericht in 2024 door Thomas Langeberg. Wij importeren wijn van kleine familieproducenten in Piemonte en Toscane."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waarom geen supermarkt-wijnen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Onze niche is wijn van producenten met minder dan 10 hectare, biologisch gecertificeerd, en bereid om direct te leveren zonder distributeur. Supermarkten werken niet met deze schaal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat kost een fles bij Vinitho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tussen €13,50 (Dolcetto d'Alba) en €32,50 (Brunello di Montalcino). Gemiddelde prijs: €18,95 inclusief BTW."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waar is Vinitho gevestigd?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amstelveen, Nederland. KvK 97388505. Btw NL005266959B81. Geen fysieke winkel, levering via online platform en geselecteerde horeca."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie is de eigenaar van Vinitho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thomas Langeberg, oprichter van LA Solutions (KvK 97388505). Tevens eigenaar van Simply Fish (visrestaurant, Amsterdam-Zuid) en ontwikkelaar van Coast RVS-systeem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe bestel ik wijn bij Vinitho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Via ons online platform of telefonisch. Minimale afname 6 flessen. Bezorging in heel Nederland."
+      }
+    }
+  ]
+}
+</script>
