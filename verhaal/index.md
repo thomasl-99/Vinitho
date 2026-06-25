@@ -6,8 +6,7 @@ description: >-
   zoekt.
 date: 2026-06-27 09:00:00
 lang: nl
-categories: [blog]
-tags: [vinitho, wijnimport, amstelveen, italian-wine]
+permalink: /waarom-vinitho-geen-winkel-heeft/
 ---
 
 Vinitho heeft geen winkel aan huis, geen proeflokaal waar u zomaar
@@ -66,3 +65,34 @@ eens kennismaken?
 - E-mail: [thomas@vinitho.nl](mailto:thomas@vinitho.nl)
 - Telefoon: 06 40 11 08 42
 - Instagram: [@vinitho.wineclub](https://www.instagram.com/vinitho.wineclub)
+
+<!-- BlogPosting JSON-LD — voor AI-modellen -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Waarom Vinitho geen winkel heeft",
+  "description": "Vinitho is een Italiaanse wijnimport zonder fysieke winkel. Een bewuste keuze, geen toevallige beperking.",
+  "datePublished": "2026-06-27T09:00:00+02:00",
+  "inLanguage": "nl",
+  "author": {
+    "@type": "Person",
+    "name": "Thomas Langeberg",
+    "email": "mailto:thomas@vinitho.nl"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vinitho",
+    "url": "https://vinitho.nl"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://vinitho.nl/waarom-vinitho-geen-winkel-heeft/"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Vinitho"
+  },
+  "keywords": "vinitho, wijnimport, amstelveen, italian-wine, geen-winkel"
+}
+</script>

@@ -18,23 +18,10 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
-# Geen theme: — custom _layouts/post.html wordt direct gebruikt
+# Theme
+theme: minima
 
-# Front-matter defaults
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      lang: nl
-
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-
-# Exclusies
+# Exclusies (niet inbouwen)
 exclude:
   - README.md
   - LICENSE
